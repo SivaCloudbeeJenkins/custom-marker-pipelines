@@ -1,8 +1,7 @@
 library 'cd-accel'
 def testPodYaml = libraryResource 'podtemplates/nodejs-app/web-test-pod.yml'
 pipeline {
- // agent { label 'nodejs-app' }
- agent none
+  agent none
    options { 
     buildDiscarder(logRotator(numToKeepStr: '2'))
     skipDefaultCheckout true
